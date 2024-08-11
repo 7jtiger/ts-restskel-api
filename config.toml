@@ -1,0 +1,33 @@
+[server]
+mode = "local"  # local, dev, prod
+port = 3000
+authRedirectUrl = "http://localhost:8080/auth"
+
+[accountDB]
+host = "localhost"
+user = "root"
+password = "password"
+database = "adb"
+
+[contentDB]
+host = "localhost"
+user = "root"
+password = "password"
+database = "cdb"
+
+[redis]
+host = "localhost:6379"
+port = 6379
+user = "root"
+password = "password"
+connect = 1
+
+[jwt]
+secret = "your-secret-key"
+expiresIn = "1h"
+
+[log]
+path = "./logs/skel-api-"
+level = "info"
+botToken = "55883558835:AAEJZ-Z-Z-Z-Z-Z-Z-Z-Z-Z-Z-Z-Z-Z-Z"
+chatId = "-1002102102102"
