@@ -2,22 +2,20 @@
 ./node_modules
 ./node_modules/*
 */node_modules/*
+**/node_modules
 
 # testing
 logs/
 ./logs
 ./logs/*
+**/logs
 
 # production
-
 .dist
 ./.dist
 ./.dist/*
+**/.dist
 
 # misc
-
 .DS_Store
 .env\*
-
-# debug
-
