@@ -66,3 +66,51 @@ export const checkRedisPool = async () => {
 };
 
 export default redisPool;
+
+
+/*
+const redisClient = new Redis({
+  host: cfg.redis.host,
+  port: cfg.redis.port,
+  username: cfg.redis.user,
+  password: cfg.redis.password,
+  retryStrategy: (times: number) => {
+    if (times > MAX_RETRIES) {
+      log.error('Max Redis connection retries reached. Giving up.');
+      return null;
+    }
+    const delay = Math.min(times * INITIAL_DELAY, 30000);
+    log.warn(`Retrying Redis connection in ${delay}ms...`);
+    return delay;
+  },
+});
+
+redisClient.on('error', (err: Error) => {
+  log.error('Redis Client Error', err);
+});
+
+redisClient.on('connect', () => log.info('Redis Client connected successfully'));
+
+export const getRedisClient = () => redisClient;
+
+export const closeRedisClient = async () => {
+  try {
+    await redisClient.quit();
+    log.info('Redis connection closed');
+  } catch (error) {
+    log.error('Error closing Redis connection', error);
+  }
+};
+
+export const checkRedisClient = async () => {
+  try {
+    await redisClient.ping();
+    return true;
+  } catch (error) {
+    log.error('Redis connection check failed', error);
+    return false;
+  }
+};
+
+export default redisClient;
+*/
